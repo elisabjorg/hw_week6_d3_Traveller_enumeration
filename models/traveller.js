@@ -13,11 +13,12 @@ Traveller.prototype.getJourneyEndLocations = function () {
     return journey.endLocation;
   });
 };
-//
-// Traveller.prototype.getJourneysByTransport = function (transport) {
-//
-// };
-//
+
+Traveller.prototype.getJourneysByTransport = function (transport) {
+  const findByTransport = this.journeys.filter(journey => journey.transport === transport);
+  return findByTransport;
+};
+
 // Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
 //
 // };
