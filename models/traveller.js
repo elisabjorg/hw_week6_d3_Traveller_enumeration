@@ -20,14 +20,16 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-  const findByDistance = this.journeys.filter(journey => journey.distance > minDistance);
+  const findByDistance = this.journeys.filter(journey => journey.distance >= minDistance);
   return findByDistance;
 };
 
-// Traveller.prototype.calculateTotalDistanceTravelled = function () {
-//
-// };
-//
+Traveller.prototype.calculateTotalDistanceTravelled = function () {
+  return this.journeys.reduce(function (total, journey) {
+    return total += journey.distance
+  }, 0)
+  };
+
 // Traveller.prototype.getUniqueModesOfTransport = function () {
 //
 // };
