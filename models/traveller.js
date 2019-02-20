@@ -5,15 +5,14 @@ const Traveller = function(journeys) {
 Traveller.prototype.getJourneyStartLocations = function (location) {
   return this.journeys.map(function (journey){
     return journey.startLocation;
-  })
+  });
 };
 
-
-// Traveller.prototype.getJourneyEndLocations = function () {
-//   return journeys.map((journey) => {
-//     return journeys.endLocation;
-//   });
-// };
+Traveller.prototype.getJourneyEndLocations = function () {
+  return this.journeys.map(function (journey) {
+    return journey.endLocation;
+  });
+};
 //
 // Traveller.prototype.getJourneysByTransport = function (transport) {
 //
